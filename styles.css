@@ -229,7 +229,7 @@ header h1 {
   transition: 0.5s;
   padding-top: 60px;
   padding-bottom: 360px;
-  z-index: 1001;
+  z-index: 1000;
 }
 
 .sidebar ul {
