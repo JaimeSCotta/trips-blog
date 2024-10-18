@@ -218,7 +218,7 @@ header h1 {
 }
 
 .sidebar {
-  height: 100%;
+  height: calc(100vh - 60px);
   width: 0;
   position: fixed;
   top: 0;
@@ -228,8 +228,8 @@ header h1 {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  padding-bottom: 360px;
-  z-index: 1000;
+  padding-bottom: 60px;
+  z-index: 1001;
 }
 
 .sidebar ul {
