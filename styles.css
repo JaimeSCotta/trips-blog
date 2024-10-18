@@ -295,11 +295,12 @@ footer {
   color: white;
   text-align: center;
   padding: 5px;
-  position: fixed; /* Mantiene el footer fijo en la parte inferior */
+  position: relative; /* Mantiene el footer fijo en la parte inferior */
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
+  z-index: 1
 }
 
 
