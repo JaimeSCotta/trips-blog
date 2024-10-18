@@ -218,7 +218,7 @@ header h1 {
 }
 
 .sidebar {
-  height: calc(100vh - 60px);
+  height: calc(100vh - 60px); /* Mantiene el espacio del header */
   width: 0;
   position: fixed;
   top: 0;
@@ -226,16 +226,20 @@ header h1 {
   background-color: #333;
   color: white;
   overflow-x: hidden;
+  overflow-y: auto; /* Permite desplazarse verticalmente */
   transition: 0.5s;
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 20px; /* Reduce el padding inferior */
   z-index: 1001;
 }
+
 
 .sidebar ul {
   list-style-type: none;
   padding: 0;
+  margin-top: 20px; /* Agrega un margen superior para separar los elementos del botón */
 }
+
 
 .sidebar ul li {
   padding: 8px;
