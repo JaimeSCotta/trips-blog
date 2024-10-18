@@ -1,1 +1,1 @@
-# viajes-blog
+# trips-blog

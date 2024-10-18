@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const user = auth.currentUser;
 
   // Cargar los viajes desde el JSON
-  fetch('/viajes-blog/trips.json') // Ruta de tu archivo trips.json
+  fetch('/trips-blog/trips.json') // Ruta de tu archivo trips.json
     .then(response => response.json())
     .then(tripsData => {
       generateTrips(tripsData); // Llama a la función generateTrips pasando los datos del JSON
