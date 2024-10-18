@@ -228,6 +228,7 @@ header h1 {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  padding-bottom: 60px;
   z-index: 1000;
 }
 
