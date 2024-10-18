@@ -295,7 +295,7 @@ footer {
   color: white;
   text-align: center;
   padding: 5px;
-  position: relative; /* Mantiene el footer fijo en la parte inferior */
+  position: fixed; /* Mantiene el footer fijo en la parte inferior */
   bottom: 0;
   left: 0;
   width: 100%;
