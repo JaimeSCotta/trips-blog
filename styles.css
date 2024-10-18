@@ -1,0 +1,761 @@
+/* -- Estilos web generales -- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('img/backgrounds/white_wood_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Evita el scroll del body, delegándolo al main */
+}
+/* -- --------------------- -- */
+
+
+/* -- Estilos para la parte superior "header" -- */
+/* Estilos generales del header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.site-header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 99%; /* Usar el 100% para que los elementos ocupen todo el espacio horizontal */
+}
+
+/* Botón de hamburguesa a la izquierda */
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Botón de hamburguesa con su estilo */
+.hamburger {
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Navegación centrada */
+.nav-center {
+  display: flex;
+  justify-content: center;
+  flex: 1; /* Esto permitirá que el nav ocupe el espacio central */
+}
+
+.nav-center ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-center a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Imagen de login a la derecha */
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.login-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  position: fixed; /* Mantiene el header fijo en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que esté sobre el contenido */
+}
+
+header h1 {
+  font-size: 24px;
+  margin: 10px 0;
+  padding: 0; 
+  line-height: 1.2;
+}
+/* -- --------------------------------------- -- */
+
+
+#loginIcon {
+  width: 40px;
+  cursor: pointer;
+}
+
+/* --------------- */
+
+/* Estilo para el menú desplegable */
+#dropdownMenu {
+  position: absolute;
+  margin-top: 160px;
+  right: 20;
+  background-color: rgba(47, 123, 189, 0.8);
+  border: none;
+  padding: 10px;
+  display: none;
+  z-index: 1000;
+  border-radius: 8px;
+}
+
+#dropdownMenu p {
+  margin: 0 0 10px;
+  text-align: left;
+  color: white;
+}
+
+/* Estilos para el botón de eliminar cuenta */
+.delete-account-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0px;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  text-decoration: none; 
+} 
+
+/* Eliminar borde y fondo predeterminado de los botones */
+.delete-account-btn:focus,
+.delete-account-btn:active {
+  outline: none;
+  box-shadow: none;
+  border: none; 
+}
+
+.delete-account-btn:hover {
+  background: none;
+}
+
+#deleteUserBtn {
+  margin-top: 10px; 
+}
+
+#deleteUserBtn:hover {
+  color: #dcebf7;
+}
+
+/* --------------- */
+/* Icono de cerrar sesión */
+#logoutBtn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding: 0; 
+  outline: none; 
+}
+
+#logoutBtn img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+#logoutBtn i {
+  font-size: 18px;
+  margin-right: 8px;
+  color: white;
+}
+
+#logoutBtn:hover {
+  color: #dcebf7;
+}
+
+/* --------------- */
+
+
+.hamburger {
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1100;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 8px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  padding: 8px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #575757;
+}
+
+.sidebar.open {
+  width: 250px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 36px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background-image: url('img/backgrounds/white_wood_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 80px; /* Ajuste para evitar que el contenido se superponga al header */
+  margin-bottom: 70px; /* Asegura que haya espacio suficiente antes del footer */
+  padding-bottom: 10px; /* Espacio adicional para evitar que el contenido se corte antes del footer */
+  min-height: calc(10vh - 80px);
+  overflow-y: auto; /* Mantén el scroll dentro del main */
+}
+
+.main_trips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  position: fixed; /* Mantiene el footer fijo en la parte inferior */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+/* -- Organizar para varios dispositivos-tipos de pantalla -- */
+
+  /* -- Como se muestran los Viajes -- */
+    /* -- Para pantallas grandes -- */
+@media (min-width: 1200px) {
+  article {
+    padding: 20px;
+  }
+  article img {
+    height: 250px;
+  }
+  .main_trips {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+    /* Para pantallas medianas */
+@media (max-width: 900px) {
+  .main_trips {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  article img {
+    height: 200px;
+  }
+}
+
+    /* Para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  .main_trips {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  article img {
+    height: 150px;
+  }
+  .site-header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%; /* Usar el 100% para que los elementos ocupen todo el espacio horizontal */
+  }
+  .modal-content {
+    width: 70% !important; /* Reducir el ancho del modal al 80% de la pantalla */
+    padding: 20px; 
+  }
+
+  /* Ajustar el botón de cierre (X) para que siempre sea visible */
+  .close-modal {
+    font-size: 24px; /* Aumentar ligeramente el tamaño del botón para que sea más fácil de pulsar */
+    top: 5px;
+    right: 5px;
+  }
+
+  /* Ajuste de los inputs en el modal */
+  .modal-content input[type="email"],
+  .modal-content input[type="password"] {
+    width: 80%; /* Asegura que los inputs ocupen todo el ancho disponible */
+    padding: 15px;
+  }
+
+  /* Ajuste del botón de login */
+  .modal-content button {
+    padding: 15px; /* Reducir el padding del botón para que no sea demasiado grande */
+    font-size: 14px;
+  }
+
+  /* Ajuste del texto y enlace de "Forgot Password?" */
+  .modal-content .forgot-password,
+  .signup-link {
+    font-size: 14px; /* Hacer que el texto sea un poco más pequeño para ajustarse mejor en pantallas pequeñas */
+  }
+
+  .sidebar.open {
+    width: 120px;
+  }
+}
+/* -- ---------------------------------------------------- -- */
+
+
+/* Estilos globales para todos los elementos <article> */
+article {
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  max-height: 426px;
+  margin-bottom: 20px; /* Añadido para dar espacio entre artículos */
+}
+
+article img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+}
+
+article h2 {
+  margin: 10px 0;
+}
+
+a.read-more {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: 2px solid #333;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+a.read-more:hover {
+  background-color: #555;
+  border-color: #555;
+}
+
+.fav-button {
+  font-size: 24px;
+  border: none;
+  background: none;
+  color: gray;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: color 0.3s ease;
+}
+
+.fav-button.active {
+  color: red;
+}
+
+.fav-button:focus,
+.fav-button:hover {
+  outline: none;
+  box-shadow: none;
+}
+
+.fav-button:hover {
+  color: #555;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* Estilos del Modal */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+/* Estilos del contenido del modal */
+.modal-content {
+  background: linear-gradient(135deg, #004d80, #2f7bbd); /* Degradado similar a la imagen */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  width: 400px; /* Ajusta según lo que prefieras */
+  color: white; /* Color de texto blanco */
+  position: relative;
+  text-align: center; /* Centra el contenido */
+  max-width: 90%;
+  margin: auto;
+}
+
+/* Botón para cerrar */
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Estilos de los inputs */
+.modal-content input[type="email"],
+.modal-content input[type="password"] {
+  width: 80%;
+  padding: 15px;
+  padding-left: 40px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid white;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+}
+
+/* Cambia el placeholder a un color gris claro */
+.modal-content input::placeholder {
+  color: #c0c0c0;
+}
+
+.modal-content input:focus {
+  outline: none;
+  border-bottom: 2px solid #00d4ff;
+}
+
+/* Contenedor de input con icono */
+.input-icon {
+  position: relative;
+}
+
+.input-icon input {
+  padding-left: 40px; /* Añade espacio para el icono */
+}
+
+/* Estilos del icono */
+.input-icon i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 18px;
+}
+
+/* Estilos del primer checkbox (Remember me) */
+.modal-content .checkbox-container.remember-checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.modal-content .checkbox-container.remember-checkbox label {
+  font-size: 14px;
+  color: #c0c0c0;
+}
+
+/* Estilos del segundo checkbox (Policy) */
+.modal-content .checkbox-policy-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Estilos específicos para el checkbox de la política */
+.modal-content label.custom-checkbox {
+  display: inline-block;
+  font-size: 14px;
+  color: #c0c0c0;
+  position: relative;
+  padding-left: 25px; /* Espacio para el checkbox */
+  cursor: pointer;
+  white-space: normal; /* Evitar saltos de línea innecesarios */
+}
+
+/* Estilo para enlaces (términos de uso y política de privacidad) */
+.modal-content .checkbox-policy-container label.custom-checkbox a {
+  color: #00d4ff; /* Cambia el color del enlace a azul */
+  text-decoration: underline; /* Agrega subrayado opcional */
+}
+
+/* Ocultar solo el checkbox de la política */
+.modal-content .checkbox-policy-container input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Crear el aspecto personalizado del checkbox (Policy) */
+.modal-content .checkbox-policy-container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 14px; /* Tamaño más pequeño del checkbox */
+  width: 14px;  /* Tamaño más pequeño del checkbox */
+  background-color: #f0f0f0;
+  border: 2px solid #c0c0c0;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Efecto hover solo para el checkbox de la política */
+.modal-content .checkbox-policy-container label.custom-checkbox:hover input ~ .checkmark {
+  background-color: #e0e0e0;
+}
+
+/* Checkbox de la política marcado */
+.modal-content .checkbox-policy-container input:checked ~ .checkmark {
+  background-color: #009688; /* Color del fondo cuando está seleccionado */
+  border-color: #009688;
+}
+
+/* Añadir la marca de verificación solo para el checkbox de la política */
+.modal-content .checkbox-policy-container .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Mostrar la marca de verificación cuando está seleccionado */
+.modal-content .checkbox-policy-container input:checked ~ .checkmark::after {
+  display: block;
+}
+
+/* Estilos de la marca de verificación */
+.modal-content .checkbox-policy-container .checkmark::after {
+  left: 4px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+
+
+/* Estilos del botón de login */
+.modal-content button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background-color: #00264d; /* Color del botón similar al adjunto */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #004080; /* Color de hover */
+}
+
+/* Estilos del enlace "Forgot Password?" */
+.modal-content .forgot-password {
+  color: #c0c0c0;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.modal-content .forgot-password:hover {
+  color: white;
+}
+
+/* Ajustes finales */
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: white;
+  font-size: 24px;
+}
+
+.signup-link {
+  margin-top: 15px;
+  color: #c0c0c0;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #00d4ff; /* Color del enlace */
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  color: white; /* Cambiar color al pasar el cursor */
+}
+
+/* Estilos del banner */
+.banner-message {
+  background-color: #004080;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-bottom: 15px; /* Espacio debajo del banner para separar del formulario */
+}
+
+.banner-message p {
+  margin: 0;
+}
+
+
+/* Estilos del modal de bienvenida */
+#welcomeModal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+#welcomeModal .modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#welcomeModal .modal-content h2 {
+  color: #25ffe2;
+}
+
+#welcomeModal .modal-content p {
+  color: #25ffe2;
+}
+
+#welcomeModal .close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+#signUpModal, #authModal {
+  display: none;
+}
+
+/* Estilos para eliminar el fondo blanco del autocompletar de Chrome eelimina autocompletar*/
+input:-webkit-autofill {
+  background-color: transparent !important;
+  color: white !important; /* Ajustar el color del texto */
+  border-bottom: 2px solid #00d4ff; /* Mantener el borde inferior personalizado */
+}
+
+input:-webkit-autofill::first-line {
+  color: white !important; /* Asegúrate de que el color del texto sea blanco */
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0px 1000px transparent inset !important; /* Elimina el fondo */
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important; /* Elimina el fondo en webkit */
+  transition: background-color 5000s ease-in-out 0s; /* Para prevenir cambios rápidos de color */
+}
