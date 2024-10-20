@@ -10,9 +10,10 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <!-- Firebase SDK -->
-  <script type="module" defer src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
-  <script type="module" defer src="https://www.gstatic.com/firebasejs/9.1.0/firebase-auth.js"></script>
-  <script type="module" defer src="https://www.gstatic.com/firebasejs/9.1.0/firebase-firestore.js"></script>
+  <script type="module" async src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+  <script type="module" async src="https://www.gstatic.com/firebasejs/9.1.0/firebase-auth.js"></script>
+  <script type="module" async src="https://www.gstatic.com/firebasejs/9.1.0/firebase-firestore.js"></script>
+  
 
 </head>
 <body>
@@ -20,19 +21,15 @@
   <main>
     <section class="main_trips"> <!-- Utilizamos la clase main_trips para los mismos estilos -->
       <article>
-        <img src="img/PXL_20240827_184443432.jpg" alt="Tenerife 2024"> <!-- Ruta corregida -->
+        <img src="img/PXL_20240827_184443432.jpg" alt="Tenerife 2024">
         <p>Aquí puedes escribir toda la información sobre este viaje o tema específico...</p>
         <p>Es un destino maravilloso, lleno de naturaleza y con un paisaje inolvidable...</p>
       </article>
 
       <article>
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1H-5W91xke8RqFLbHX8FKnRoj1yYoWr0&ehbc=2E312F" width="640" height="480"></iframe>
+        <iframe class="responsive-map" src="https://www.google.com/maps/d/u/0/embed?mid=1H-5W91xke8RqFLbHX8FKnRoj1yYoWr0&ehbc=2E312F" width="640" height="480" loading="lazy"></iframe>
       </article>
     </section>
   </main>
-
-  <footer>
-    <p>© 2024 Blog de Viajes</p>
-  </footer>
 </body>
 </html>
