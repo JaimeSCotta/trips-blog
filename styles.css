@@ -55,7 +55,7 @@ html, body {
   left: 0;
   width: 100%;
   z-index: 1000;
-  transition: top 0.3s ease; /* Para animar la desaparición */
+  transition: top 0.3s ease-in-out; /* Para animar la desaparición */
 }
 
 .trips-footer {

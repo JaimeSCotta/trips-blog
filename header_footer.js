@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
       if (scrollTop > lastScrollTop) {
         // Scrolling down
-        header.style.top = "-100px"; // Mueve el header fuera de la vista
+        header.style.top = "-400px"; // Mueve el header fuera de la vista
       } else {
         // Scrolling up
         header.style.top = "0";
@@ -19,8 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
       // Mostrar el footer cuando llegamos al final de la página
       if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
         footer.style.bottom = "0"; // Muestra el footer
+        footer.style.position = "fixed"; // Cambia a fixed para que siempre esté visible
       } else {
         footer.style.bottom = "-100px"; // Mantiene el footer oculto
+        footer.style.position = "absolute"; // Mantiene la posición original fuera de la vista
       }
     });
   });
