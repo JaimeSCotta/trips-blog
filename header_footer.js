@@ -3,25 +3,24 @@ document.addEventListener("DOMContentLoaded", function() {
     const footer = document.querySelector(".trips-footer");
     let lastScrollTop = 0;
   
-    // Ocultar el header mientras haces scroll hacia abajo
+    // Ocultar el header al hacer scroll hacia abajo, mostrarlo al hacer scroll hacia arriba
     window.addEventListener("scroll", function() {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   
       if (scrollTop > lastScrollTop) {
-        header.classList.add("hidden"); // Oculta el header
+        // Scrolling down
+        header.style.top = "-100px"; // Mueve el header fuera de la vista
       } else {
-        header.classList.remove("hidden"); // Muestra el header
+        // Scrolling up
+        header.style.top = "0";
       }
-  
       lastScrollTop = scrollTop;
   
-      // Mostrar el footer solo cuando llegues al final de la página
+      // Mostrar el footer cuando llegamos al final de la página
       if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        footer.classList.remove("hidden");
-        footer.classList.add("visible");
+        footer.style.bottom = "0"; // Muestra el footer
       } else {
-        footer.classList.remove("visible");
-        footer.classList.add("hidden");
+        footer.style.bottom = "-100px"; // Mantiene el footer oculto
       }
     });
   });

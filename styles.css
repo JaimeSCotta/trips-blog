@@ -17,38 +17,58 @@ html, body {
 
 /* -- Estilos para la parte superior "header" -- */
 /* Estilos generales del header */
-.site-header, .trips-header {
+.site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #333;
   color: white;
   padding: 5px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 1000;
-  transition: transform 0.3s ease;
 }
 
-.trips-header.hidden {
-  transform: translateY(-100%); /* Oculta el header fuera de la vista */
-}
-
-.site-footer, .trips-footer {
+.site-footer {
   background-color: #333;
   color: white;
   text-align: center;
   padding: 5px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
   z-index: 1000;
-  transition: opacity 0.3s ease;
 }
 
-.trips-footer.hidden {
-  opacity: 0; /* Hace el footer invisible */
+.trips-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: top 0.3s ease; /* Para animar la desaparición */
 }
 
-.trips-footer.visible {
-  opacity: 1; /* Muestra el footer */
+.trips-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  position: absolute; /* Inicialmente, no está fijo */
+  bottom: -100px; /* Está oculto al principio */
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: bottom 0.3s ease; /* Para animar la aparición */
 }
 
 
