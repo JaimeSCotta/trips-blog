@@ -17,7 +17,42 @@ html, body {
 
 /* -- Estilos para la parte superior "header" -- */
 /* Estilos generales del header */
-.site-header {
+.site-header, .trips-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.trips-header.hidden {
+  transform: translateY(-100%); /* Oculta el header fuera de la vista */
+}
+
+.site-footer, .trips-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  width: 100%;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.trips-footer.hidden {
+  opacity: 0; /* Hace el footer invisible */
+}
+
+.trips-footer.visible {
+  opacity: 1; /* Muestra el footer */
+}
+
+
+/* .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +64,7 @@ html, body {
   left: 0;
   width: 100%;
   z-index: 1000;
-}
+} */
 
 .site-header__wrapper {
   display: flex;
@@ -294,17 +329,17 @@ main {
   padding: 20px 0;
 }
 
-footer {
+/* .site-footer {
   background-color: #333;
   color: white;
   text-align: center;
   padding: 5px;
-  position: fixed; /* Mantiene el footer fijo en la parte inferior */
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-}
+} */
 
 
 /* -- Organizar para varios dispositivos-tipos de pantalla -- */
