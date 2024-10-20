@@ -764,18 +764,3 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0px 1000px transparent inset !important; /* Elimina el fondo en webkit */
   transition: background-color 5000s ease-in-out 0s; /* Para prevenir cambios rápidos de color */
 }
-
-.responsive-map {
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* Proporción de 16:9 */
-  position: relative;
-}
-
-.responsive-map iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
