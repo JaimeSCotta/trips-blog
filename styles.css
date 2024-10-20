@@ -10,7 +10,6 @@ html, body {
   background-position: center;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Evita el scroll del body, delegándolo al main */
 }
 /* -- --------------------- -- */
 
