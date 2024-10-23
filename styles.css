@@ -62,12 +62,12 @@ html, body {
   color: white;
   text-align: center;
   padding: 5px;
-  position: absolute; /* Inicialmente, no está fijo */
-  bottom: -100px; /* Está oculto al principio */
+  position: fixed;
+  bottom: -100px; /* Oculto al principio */
   left: 0;
   width: 100%;
   z-index: 1000;
-  transition: bottom 0.3s ease; /* Para animar la aparición */
+  transition: bottom 0.3s ease; /* Animación para aparecer */
 }
 
 
@@ -326,6 +326,21 @@ header h1 {
   cursor: pointer;
 }
 
+/* main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background-image: url('img/backgrounds/white_wood_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 80px;
+  margin-bottom: 70px; 
+  padding-bottom: 10px;
+  min-height: calc(10vh - 80px);
+  overflow-y: auto; 
+} */
+
 main {
   flex: 1;
   display: flex;
@@ -334,18 +349,25 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: 80px; /* Ajuste para evitar que el contenido se superponga al header */
-  margin-bottom: 70px; /* Asegura que haya espacio suficiente antes del footer */
-  padding-bottom: 10px; /* Espacio adicional para evitar que el contenido se corte antes del footer */
-  min-height: calc(10vh - 80px);
-  overflow-y: auto; /* Mantén el scroll dentro del main */
+  padding-bottom: 10px; /* Evita que el contenido se corte antes del footer */
+  overflow-y: auto; /* Scroll dentro del main */
 }
 
-.main_trips {
+/* .main_trips {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px 0;
+} */
+
+.main_trips {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin-top: 80px; /* Espacio para el header */
+  margin-bottom: 0; /* Eliminamos espacio para que el footer aparezca */
 }
 
 /* .site-footer {

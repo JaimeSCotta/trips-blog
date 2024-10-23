@@ -1,29 +1,27 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const header = document.querySelector(".trips-header");
-    const footer = document.querySelector(".trips-footer");
-    let lastScrollTop = 0;
-  
-    // Ocultar el header al hacer scroll hacia abajo, mostrarlo al hacer scroll hacia arriba
-    window.addEventListener("scroll", function() {
-      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  
-      if (scrollTop > lastScrollTop) {
-        // Scrolling down
-        header.style.top = "-400px"; // Mueve el header fuera de la vista
-      } else {
-        // Scrolling up
-        header.style.top = "0";
-      }
-      lastScrollTop = scrollTop;
-  
-      // Mostrar el footer cuando llegamos al final de la página
-      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        footer.style.bottom = "0"; // Muestra el footer
-        footer.style.position = "fixed"; // Cambia a fixed para que siempre esté visible
-      } else {
-        footer.style.bottom = "-100px"; // Mantiene el footer oculto
-        footer.style.position = "absolute"; // Mantiene la posición original fuera de la vista
-      }
-    });
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('.trips-header');
+  const footer = document.querySelector('.trips-footer');
+  let lastScrollTop = 0;
+
+  // Ocultar el header al hacer scroll hacia abajo y mostrar al subir
+  window.addEventListener('scroll', () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Scroll hacia abajo - ocultamos el header
+      header.style.top = '-80px'; // Ajusta el valor según la altura del header
+    } else {
+      // Scroll hacia arriba - mostramos el header
+      header.style.top = '0';
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evita valores negativos
+
+    // Mostrar el footer cuando se llega al final de la página
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+      footer.style.bottom = '0';
+    } else {
+      footer.style.bottom = '-100px'; // Ocultar el footer de nuevo cuando se sube
+    }
   });
-  
+});
