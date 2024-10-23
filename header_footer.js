@@ -1,3 +1,6 @@
+// header_footer.js
+console.log('El archivo header_footer.js se ha cargado correctamente.');
+
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.trips-header');
   const footer = document.querySelector('.trips-footer');
