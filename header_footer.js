@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Ocultar el header al hacer scroll hacia abajo y mostrar al subir
   window.addEventListener('scroll', () => {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    console.log('Scroll position:', scrollTop);
 
     if (scrollTop > lastScrollTop) {
       // Scroll hacia abajo - ocultamos el header
@@ -17,8 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evita valores negativos
 
-    // Mostrar el footer cuando se llega al final de la página
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+    // Verificar si el usuario ha llegado al final de la página
+    const scrollHeight = document.body.scrollHeight;
+    const viewportHeight = window.innerHeight;
+
+    console.log('Altura total de la página:', scrollHeight);
+    console.log('Altura de la ventana:', viewportHeight);
+    console.log('Posición actual del scroll:', window.scrollY);
+
+    if (scrollHeight - viewportHeight <= window.scrollY + 1) {
+      // Usuario ha llegado al final de la página
       footer.style.bottom = '0';
     } else {
       footer.style.bottom = '-100px'; // Ocultar el footer de nuevo cuando se sube
