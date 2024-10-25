@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('Header:', header);
   console.log('Footer:', footer);
 
+  if (!header || !footer) {
+    console.error('No se encontró el header o footer en el DOM.');
+    return;
+  }
+
   let lastScrollTop = 0;
 
   // Ocultar el header al hacer scroll hacia abajo y mostrar al subir
@@ -17,9 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (scrollTop > lastScrollTop) {
       // Scroll hacia abajo - ocultamos el header
       header.style.top = '-80px'; // Ajusta el valor según la altura del header
+      console.log('Header oculto');
     } else {
       // Scroll hacia arriba - mostramos el header
       header.style.top = '0';
+      console.log('Header mostrado');
     }
 
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evita valores negativos
@@ -27,16 +34,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Verificar si el usuario ha llegado al final de la página
     const scrollHeight = document.body.scrollHeight;
     const viewportHeight = window.innerHeight;
+    const currentScroll = window.scrollY;
 
+    // Añadir más logs para ver todos los valores
     console.log('Altura total de la página:', scrollHeight);
     console.log('Altura de la ventana:', viewportHeight);
-    console.log('Posición actual del scroll:', window.scrollY);
+    console.log('Posición actual del scroll:', currentScroll);
 
-    if (scrollHeight - viewportHeight <= window.scrollY + 1) {
+    // Modifica el margen para detectar el final de la página (aumentado de 1px a 10px)
+    if (scrollHeight - viewportHeight <= currentScroll + 10) {
       // Usuario ha llegado al final de la página
       footer.style.bottom = '0';
+      console.log('Footer mostrado');
     } else {
       footer.style.bottom = '-100px'; // Ocultar el footer de nuevo cuando se sube
+      console.log('Footer oculto');
     }
   });
 });
