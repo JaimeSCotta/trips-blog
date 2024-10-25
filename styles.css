@@ -35,12 +35,9 @@ html, body {
   color: white;
   text-align: center;
   padding: 5px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  z-index: 1000;
 }
+
 
 .trips-header {
   display: flex;
@@ -349,7 +346,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding-bottom: 10px; /* Evita que el contenido se corte antes del footer */
+  padding-bottom: 50px; /* Evita que el contenido se corte antes del footer */
   overflow-y: auto; /* Scroll dentro del main */
 }
 

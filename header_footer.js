@@ -36,12 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const viewportHeight = window.innerHeight;
     const currentScroll = window.scrollY;
 
-    // Añadir más logs para ver todos los valores
+    // Logs para depurar el scroll
     console.log('Altura total de la página:', scrollHeight);
-    console.log('Altura de la ventana:', viewportHeight);
-    console.log('Posición actual del scroll:', currentScroll);
+    console.log('Altura de la ventana (viewport):', viewportHeight);
+    console.log('Posición actual del scroll (scrollY):', currentScroll);
+    console.log('Diferencia entre scrollHeight y viewportHeight:', scrollHeight - viewportHeight);
+    console.log('Diferencia entre scrollHeight y scroll actual:', scrollHeight - viewportHeight - currentScroll);
 
-    // Modifica el margen para detectar el final de la página (aumentado de 1px a 10px)
+    // Condición ajustada para detectar el final de la página
     if (scrollHeight - viewportHeight <= currentScroll + 10) {
       // Usuario ha llegado al final de la página
       footer.style.bottom = '0';
